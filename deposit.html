@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>dep&withdrawl</title>
+</head>
+<body >
+	<style>
+	margin: 0;
+	padding-top: 100px;
+  background-color: bg12.jpg;
+}
+
+body
+	{
+		background-image:url(bg14.jpg);
+		background-size:cover;
+	}
+.submit-area {
+	padding: 30px;
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 5px 5px gray;
+  color: blue;
+  background-color: orange;
+}
+
+#account-area {
+	margin-top: 5%;
+}
+
+.deposit {
+	background-color: tomato;
+}
+
+.withdraw {
+	background-color: pink;
+}
+
+.balance {
+	background-color: lightsalmon;
+}
+
+.status {
+	margin: 0 20px;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+</style>
+	<div id="account-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-3">
+        <div class="deposit status">
+          <h5>Deposit</h5>
+          <h2>$ <span id="current-deposit">00</span></h2>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-3">
+        <div class="withdraw status">
+          <h5>Withdraw</h5>
+          <h2>$ <span id="current-withdraw">00</span></h2>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-3">
+        <div class="balance status">
+          <h5>Balance</h5>
+          <h2>$ <span id="current-balance">1240</span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="submit-area">
+          <h4>Deposit Amount</h4>
+          <input id="deposit-amount" type="text" class="form-control" placeholder="Enter deposit amount"><br>
+          <button id="deposit-btn" class="btn btn-success">Deposit</button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="submit-area">
+          <h4>Withdraw Amount</h4>
+          <input id="withdraw-amount" type="text" class="form-control" placeholder="Enter withdraw amount"><br>
+          <button id="withdraw-btn" class="btn btn-success">Withdraw</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="deposit.js">  
+</script>
+
+<ul type="circle" align="center">
+<li><button name="button"type="button" ><a href="index1.html">HOME</a></button></li><br>
+</ul>
+
+</body>
+</html>

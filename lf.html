@@ -1,0 +1,248 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Login Form</title> 
+
+<style>
+	body{
+		background-image:url(bg17.jpg);
+		background-size:cover;
+	}
+</style>
+
+<link rel="stylesheet" href="style.css" /> 
+<script> 
+function validationForm(){ 
+//name field 
+if(document.getElementById('name').value==''){ 
+alert('Please enter your name'); 
+document.getElementById('name').focus(); 
+return false; 
+} 
+//last name field 
+if(document.getElementById('lname').value==''){ 
+alert('Please enter your last name'); 
+document.getElementById('lname').focus(); 
+return false; 
+} 
+//password field 
+if(document.getElementById('password').value==''){ 
+alert('please enter your password'); 
+document.getElementById('password').focus(); 
+return false; 
+} 
+//Gender field 
+var x=document.getElementsByName('gender'); 
+var y=x.length; 
+var z= 0; 
+for(var i=0;i<y;i++){ 
+if(x[i].checked==true){ 
+z=1; 
+} 
+} 
+if(z==0 ){ 
+alert('tick your gender'); 
+return false; 
+} 
+//country field 
+if(document.getElementById('country').value==''){ 
+alert('Select your country'); 
+document.getElementById('country').focus(); 
+return false; 
+} 
+//city field 
+if(document.getElementById('city').value==''){ 
+alert('Select your City'); 
+document.getElementById('city').focus(); 
+return false; 
+} 
+//file field 
+if(document.getElementById('file').value==''){ 
+alert('File is required'); 
+document.getElementById('file').focus(); 
+return false; 
+} 
+//checkbox field 
+var option= document.getElementsByName("option[]"); 
+if(option[0].checked ==false && option[1].checked==false && option[2].checked==false && option[3].checked==false && option[4].checked==false){ 
+alert('Please check at least one of the options.'); 
+return false; 
+} 
+return true; 
+} 
+</script> 
+</head> 
+<body> 
+	<style>
+		background: #000; 
+		font-family:Arial, Helvetica, sans-serif; 
+		font-size:13px; 
+		color:#000; 
+		margin-left:100px; 
+		margin-right:100px; 
+} 
+ 
+.heading{ 
+		font-family:Verdana, Geneva, sans-serif; 
+		font-size:44px; 
+		color:#FC9; 
+} 
+ 
+#lables{ 
+		font-family:Arial, Helvetica, sans-serif; 
+		font-size:12px; 
+} 
+ 
+td{ 
+		font-family:Verdana, Geneva, sans-serif; 
+		font-size:18px; 
+		color:#000; 
+} 
+ 
+.container{ 
+		background-color:#FC9; 
+		font:Verdana, Geneva, sans-serif; 
+		height:500px; 
+} 
+input { 
+		font:small-caption; 
+		font-size:16px; 
+} 
+ 
+.button { 
+        background-color: #4CAF50; /* Green */ 
+        border: none; 
+		color: white; 
+		padding: 10px 14px; 
+		text-align: center; 
+		text-decoration: none; 
+		display: inline-block; 
+		font-size: 16px; 
+		margin: 4px 2px; 
+		-webkit-transition-duration: 0.4s; /* Safari */ 
+		transition-duration: 0.4s; 
+		cursor: pointer; 
+} 
+ 
+.button1 { 
+		background-color:white ; 
+		color: black; 
+		border: 2px solid #4CAF50; 
+} 
+ 
+.button1:hover { 
+		background-color: #4CAF50; 
+		color: white; 
+} 
+ 
+.button2 { 
+		background-color: white; 
+		color: black; 
+border: 2px solid #008CBA; 
+} 
+ 
+.button2:hover { 
+		background-color: #008CBA; 
+		color: white; 
+}
+</style>
+<h1> 
+<center> 
+<div class="heading">Login Form</div> 
+</center> 
+</h1> 
+<br /> 
+<div class="container"> 
+<form name="loginform" id="loginform" enctype="multipart/form-data" method="post" onsubmit="return validationForm()"> 
+<!--table_content--> 
+<table align="center" border="0" cellspacing="3" cellpadding="3" width="100%" bordercolordark="#000000" bordercolorlight="#000000"> 
+<tr> 
+<td height="52" colspan="3" align="center" bgcolor="#FFFFB0"> 
+<strong>DETAILS</strong> 
+</td> 
+</tr> 
+<tr> 
+<td height="44" bgcolor="#E1E3E3"> 
+&nbsp;Name 
+</td> 
+<td width="76%" bgcolor="#E1E3E3"> 
+<input type="text" name="name" placeholder=" first name" id="name" style="width:25%" /> 
+<input type="text" name="name" placeholder=" last name" id="lname" style="width:25%" /> 
+</td> 
+</tr> 
+<tr> 
+<td height="44" bgcolor="#FFFFFF"> &nbsp;Password</td> 
+<td bgcolor="#FFFFFF" > 
+<input type="password" name="password" id="password" /> 
+</td> 
+</tr> 
+<tr> 
+<td height="44" bgcolor="#E1E3E3">&nbsp;Gender</td> 
+<td bgcolor="#E1E3E3"> 
+<input type="radio" name="gender" value="male" id="gender"/> 
+<label style="margin-right:5px">Male</label> 
+<input type="radio" name="gender" value="female" id="gender"/>Female 
+<input type="radio" name="gender" value="other" id="gender"/>Other 
+</td> 
+</tr> 
+<tr> 
+<td height="45" bgcolor="#FFFFFF">&nbsp;Date/time</td> 
+<td bgcolor="#FFFFFF"><input type="date" id="number" /> 
+&nbsp; 
+<input type="time" id="number" /></td> 
+</tr> 
+<tr> 
+<td height="41" bgcolor="#E1E3E3">&nbsp;Country/City</td> 
+<td bgcolor="#E1E3E3"> 
+<select name="country" id="country" size="0" style="width:25%; height:27px; "> 
+<option value="">---Select Country---</option> 
+<option value="0">India</option> 
+<option value="1">USA</option> 
+<option value="2">Japan</option> 
+<option value="3">UK</option> 
+<option value="4">Russia</option> 
+</select> 
+<select name="city" id="city" size="0" style="width:25%; height:27px;"> 
+<option value="">---Select City---</option> 
+<option value="0">Mumbai</option> 
+<option value="1">Los-Angeles</option> 
+<option value="2">Nagpur</option> 
+<option value="3">Austin</option> 
+<option value="4">Sydney</option> 
+</select> 
+</td> 
+</tr> 
+<tr> 
+<td height="45" bgcolor="#FFFFFF">&nbsp;Photo</td> 
+<td bgcolor="#FFFFFF"> 
+<input type="file" name="file" id="file" value="file" /></td> 
+</tr> 
+<tr> 
+<td height="45" bgcolor="#E1E3E3">&nbsp;Qualifications</td> 
+<td bgcolor="#E1E3E3"> 
+<input type="checkbox" name="option[]" value="option 1" />10TH &nbsp; &nbsp; 
+<input type="checkbox" name="option[]" value="option 2" />12TH &nbsp; &nbsp; 
+<input type="checkbox" name="option[]" value="option 3" />Graduate &nbsp; &nbsp; 
+<input type="checkbox" name="option[]" value="option 4" />Post-graduate &nbsp; &nbsp; 
+</td> 
+</tr> 
+<tr> 
+<td height="45" colspan="2" bgcolor="#FFFFB0"> 
+<center> 
+<!--submit button--> 
+<input type="submit" class="button button1" name="submit" id="submit" value="Submit" style="font-family:Arial;font-size:23px; color:#000;"/> 
+&nbsp; &nbsp; 
+<!--reset button--> 
+<input type="reset" class="button button2" name="reset" id="reset" value="Reset" style="font-family:Arial;font-size:23px; color:#000" /> 
+</center> 
+</td> 
+</tr> 
+</table> 
+</form> 
+</div> 
+</body> 
+	<ul type="circle" align="center">
+<li><button name="button"type="button" ><a href="index1.html">HOME</a></button></li><br>
+</ul>
+</html> 
+ 
